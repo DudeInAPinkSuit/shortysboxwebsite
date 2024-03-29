@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 5%);
+    color:white;
+    overflow-x: hidden;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    padding: 10px 10%;
+}
+
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    z-index: 10;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px;
+}
+nav ul li a{
+    padding: 5px 10px;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid none;
+    border-radius: 10px;
+    background-color: none;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+nav ul li a:hover{
+    background-color: #f99500;
+    border-color: #f99500;
+}
+.wrapper{
+    position: relative;
+    top: -52px;
+    width: 100%;
+    height: 100vh;
+
+}
+.camwithtext{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    
+}
+.cam{
+    position: relative;
+    left: 225px;
+    width: 500px;
+    height: 500px;
+    background-image: url(images/camwithlogo.png);
+    background-size: cover;
+    background-position: center;
+    animation: slideRightCamera;
+    animation-duration: 1.75s;
+    z-index: 2;
+    
+}
+.textflexbox{
+    position: relative;
+    bottom: 310px;
+    left: -230px;
+    color:white;
+    animation: slideLeftText;
+    animation-duration: 1.75s;
+    z-index: 1;
+}
+.maintext{
+    font-size: 80px;
+}
+.maintext span{
+    color: #f99500;
+}
+.textflexbox p{
+    color: white;
+    font-size: 68px;
+    font-style: italic;
+}
+.subtitle{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-style: italic;
+    color: grey;
+}
+.subtitle h2{
+    position: absolute;
+    bottom: 10%;
+
+}
+#services{
+    width: 100%;
+    background-color: hsl(0, 0%, 10%);
+    padding: 30px 0 50px 0;
+}
+
+.gridlist{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.gridlist div{
+    background-color: hsl(0, 0%, 30%);
+    border: 1px solid none;
+    border-radius: 20px;
+    padding: 40px;
+    transition: background 0.5s, transform 0.5s, color 0.5s;
+}
+.gridlist i{
+    font-size: 35px;
+    margin-bottom: 10px;
+
+}
+.gridlist h2{
+    margin-bottom: 10px;
+}
+.gridlist div:hover{
+    background: #f99500;
+    transform: translateY(-10px);
+    color:black;
+}
+.gridlist div:hover > *{
+    color:black;
+}
+#portfolio{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 0%, 5%);
+    padding: 100px 0;
+}
+.scroller{
+    margin: 0;
+    padding: 0;
+    width: 1750px;
+    height: 250px;
+    white-space: nowrap;
+}
+.scrollerinner{
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    animation: marqueeLeft 10s infinite linear;
+}
+.cosplayimages{
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+    padding: 0;
+    border-radius: 15px;
+}
+#secondinner{
+    animation: marqueeRight 10s infinite linear;
+}
+.headertext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px;
+    font-size: 40px;
+}
+.headertext h1 span{
+    color: #f99500;
+}
+.headertext p{
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    color: grey;
+}
+#about{
+    background-color: black;
+}
+
+@keyframes marqueeLeft {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes marqueeRight {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideRightCamera {
+    from{
+        transform: translateX(-225px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideLeftText {
+    from{
+        transform: translateX(230px);
+        
+    }
+    to{
+        transform: translateX(0);
+        
+    }
+}
+@keyframes slideUpCamera {
+    from{
+        transform: translateY(140px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideDownText {
+    from{
+        transform: translateY(-125px);
+        
+    }
+    to{
+        transform: translateY(0);
+        
+    }
+}
+@keyframes slideUpCameraMobile {
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideDownTextMobile {
+    from{
+        transform: translateY(-50px);
+        
+    }
+    to{
+        transform: translateY(0);
+        
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px){
+
+    .cam{
+        left: 0;
+        bottom: 140px;
+        animation: slideUpCamera;
+        animation-duration: 1.75s;
+    }
+    .textflexbox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 225px;
+        left: 0;
+        animation: slideDownText;
+        animation-duration: 1.75s;
+    }
+
+}
+@media (max-width: 600px){
+    .wrapper{
+        top: -120px;
+    }
+    .camwithtext{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        inset: 0;
+        width: 300px;
+        height: 300px;
+    }
+    .cam{
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        aspect-ratio: 7/5;
+        animation: slideUpCameraMobile;
+        animation-duration: 1.75s;
+        
+    }
+    .textflexbox{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: slideDownTextMobile;
+        animation-duration: 1.75s;
+    }
+        
+    .maintext{
+        font-size: 48px;
+    }
+    .textflexbox p{
+        font-size: 40px;
+    }
+    .headertext{
+        margin: 15% 5px;
+    }
+    .headertext h1{
+        font-size: 40px;
+    }
+    .headertext p{
+        font-size: 20px;
+    }
+    
+}
