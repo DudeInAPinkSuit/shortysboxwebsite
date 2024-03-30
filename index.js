@@ -46,3 +46,15 @@ function tabThreeFunction(){
     }
 }
 
+const cam = document.getElementById("cam")
+const textgroup = document.getElementById("textgroup")
+
+const sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0px"
+}
+function exitmenu(){
+    sidemenu.style.right = "-200px"
+
+}

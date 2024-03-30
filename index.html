@@ -12,22 +12,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+<div class="bodywrapper">
 <div id="header">
     <div class="container">
         <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About Me</a></li>
+                <i class="fa-solid fa-xmark" onclick="exitmenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="headerwrapper">
             <div class="camwithtext">
                 <div class="cam" id="cam"></div>
-                <div class="textflexbox">
+                <div class="textflexbox" id="textgroup">
                     <h1 class="maintext">Chris <span>Red</span><br></h1>
                     <p>Photographer</p>
                 </div>
@@ -35,6 +36,11 @@
         </div>
         <div class="subtitle">
             <h2>my box, my rules</h2>
+            <div class="socials">
+                <a href="https://www.facebook.com/shortysbox"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/shortysbox/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/shortysbox/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
         </div>
     </div>
 </div>
@@ -107,7 +113,9 @@
     <div class="container">
         <div class="headertext second">
             <h1 class="maintext"><span>My </span>Portfolio</h1>
-            <p>more at my socials below</p>
+            <div><span>more at my socials</span>
+                <a class="ig" href="https://www.instagram.com/shortysbox/"><i class="fa-brands fa-instagram"></i></a>
+                <a class="fb" href="https://www.facebook.com/shortysbox"><i class="fa-brands fa-facebook"></i></a></div>
         </div>
     </div>
     <div class="scroller">
@@ -136,7 +144,7 @@
 <div id="about">
     <div class="container">
         <div class="headertext third">
-            <h1>About <span>Me</span></h1>
+            <h1 class="maintext">About <span>Me</span></h1>
         </div>
         <div class="row">
             <div class="aboutcol1">
@@ -205,6 +213,17 @@
             </div>
         </div>
     </div>
+</div>
+<div id="copyright">
+    <div class="container">
+        <div class="copyrightwrapper">
+            <p><i class="fa-regular fa-copyright"></i> 2024 Shorty's Box. All Rights Reserved. </p>
+            <p>Designed and Developed by ByteSprite Labs (Alec Nono)</p>
+        </div>
+    </div>
+</div>
+
+
 </div>
 
 <script src="index.js"></script>
