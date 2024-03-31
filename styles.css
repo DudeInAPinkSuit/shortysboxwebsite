@@ -9,6 +9,9 @@ body{
     color:white;
     overflow-x: hidden;
 }
+#embed{
+    display: none;
+}
 .bodywrapper{
     overflow-x: hidden;
 }
