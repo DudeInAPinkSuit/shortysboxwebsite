@@ -9,7 +9,6 @@ body{
     color:white;
     overflow-x: hidden;
 }
-
 .bodywrapper{
     overflow-x: hidden;
 }
@@ -20,17 +19,12 @@ body{
 .container{
     padding: 10px 10%;
 }
-
-
 nav{
     position: relative;
     display: flex;
     justify-content: end;
     align-content: center;
     z-index: 10;
-}
-.logo{
-    
 }
 nav .fa-solid{
     display: none;
@@ -123,6 +117,10 @@ nav ul li a:hover{
     margin: 0 15px;
     font-size: 36px;
     color: grey;
+    transition: color 0.3s;
+}
+.socials a:hover{
+    color: white;
 }
 #services{
     width: 100%;
